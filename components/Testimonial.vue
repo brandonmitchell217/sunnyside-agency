@@ -7,11 +7,20 @@ defineProps({
   title: String,
 });
 </script>
-<template>
-  <div class="space-y-4 lg:space-y-8 text-center px-2 lg:px-4">
-    <NuxtImg :src="image" :alt="alt" class="rounded-full w-16 h-auto mx-auto" />
 
-    <p class="text-base lg:text-lg md:min-h-[100px]">{{ text }}</p>
+<template>
+  <div class="space-y-4 lg:space-y-8 text-center px-12 sm:px-4">
+    <NuxtImg
+      :src="image"
+      :alt="alt"
+      width="60"
+      height="60"
+      class="rounded-full mx-auto"
+    />
+
+    <p class="text-lg font-medium md:min-h-[100px] max-w-[400px] mx-auto">
+      {{ text }}
+    </p>
 
     <div>
       <h5 class="font-fraunces font-extrabold">{{ person }}</h5>

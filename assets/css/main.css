@@ -7,7 +7,7 @@
     @apply relative scroll-smooth font-barlow text-lg;
   }
   .container {
-    @apply mx-auto px-4 xl:px-0;
+    @apply mx-auto px-4 sm:px-0;
   }
 
   h1,

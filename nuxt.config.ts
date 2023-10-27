@@ -6,11 +6,12 @@ export default defineNuxtConfig({
       "@nuxtjs/google-fonts",
       {
         families: {
-          Barlow: [300, 400, 600],
+          Barlow: [300, 400, 500, 600],
           Fraunces: [700, 900],
         },
       },
     ],
+    "@vueuse/nuxt",
     "nuxt-icon",
     "@nuxt/image",
   ],

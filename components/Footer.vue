@@ -1,8 +1,10 @@
 <template>
-  <footer class="bg-[#90D4C4] text-darkModerateCyan py-20">
+  <footer class="bg-[#90D4C4] text-darkModerateCyan py-16 md:py-20">
     <div class="flex flex-col items-center justify-center gap-12">
       <div class="space-y-8">
-        <Logo color="hsl(167, 40%, 24%)" class="scale-125 mx-auto" />
+        <NuxtLink to="/">
+          <Logo color="hsl(167, 40%, 24%)" class="scale-125 mx-auto" />
+        </NuxtLink>
 
         <ul class="flex items-center gap-12 font-semibold">
           <li>
@@ -42,3 +44,11 @@
     </div>
   </footer>
 </template>
+
+<style scoped lang="scss">
+a {
+  &:hover {
+    color: white;
+  }
+}
+</style>

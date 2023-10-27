@@ -1,106 +1,110 @@
 <template>
   <Nav />
-  <div class="text-darkDesaturatedBlue">
-    <HomeLanding>
-      <h1
-        class="uppercase text-3xl sm:text-4xl md:text-5xl lg:text-7xl tracking-wider"
-      >
-        We are creatives
-      </h1>
-    </HomeLanding>
-    <Slalom side="left">
-      <template #left>
-        <div
-          class="flex flex-col items-center md:items-stretch text-center md:text-left gap-3 lg:gap-6 py-[18%] md:py-0 px-[9%] lg:px-[18%]"
-        >
-          <h2 class="text-3xl lg:text-5xl">Transform your brand</h2>
-          <p class="text">
-            We are a full-service creative agency specializing in helping brands
-            grow fast. Engage your clients through compelling visuals that do
-            most of the marketing for you.
-          </p>
-          <a class="cta">Learn More</a>
-        </div>
-      </template>
-      <template #right>
-        <div>
-          <NuxtImg
-            src="/img/desktop/image-transform.jpg"
-            alt="transform egg on yellow background"
-            class="w-full h-full object-cover"
-          />
-        </div>
-      </template>
-    </Slalom>
-    <Slalom side="right">
-      <template #left>
-        <div
-          class="flex flex-col items-center md:items-stretch text-center md:text-left gap-3 lg:gap-6 py-[18%] md:py-0 px-[9%] lg:px-[18%]"
-        >
-          <h2 class="text-3xl lg:text-5xl">Standout to the right audience</h2>
-          <p class="text">
-            Using a collaborative formula of designers, researchers,
-            photographers, videographers, and copywriters, we’ll build and
-            extend your brand in digital places.
-          </p>
-          <a class="cta red">Learn More</a>
-        </div>
-      </template>
-      <template #right>
-        <div>
-          <NuxtImg
-            src="/img/desktop/image-stand-out.jpg"
-            alt="stand out cup on pink background"
-            class="w-full h-full object-cover"
-          />
-        </div>
-      </template>
-    </Slalom>
-    <Slalom side="left">
-      <template #left>
-        <div class="relative">
-          <img
-            alt="cherries on light greenish background"
-            class="w-full h-full object-cover"
-            srcset="
-              /img/mobile/image-graphic-design.jpg   640w,
-              /img/desktop/image-graphic-design.jpg 1440w
-            "
-          />
+
+  <main class="text-darkDesaturatedBlue">
+    <HomeLanding title="We are creatives" />
+
+    <section id="Slaloms">
+      <Slalom side="left">
+        <template #left>
           <div
-            class="absolute w-full px-8 bottom-6 lg:bottom-12 left-1/2 -translate-x-1/2 space-y-1.5 lg:space-y-6 text-center"
+            class="flex flex-col items-center md:items-stretch text-center md:text-left gap-3 lg:gap-6 py-[18%] md:py-0 px-[9%] lg:px-[18%]"
           >
-            <h3 class="text-2xl lg:text-3xl">Graphic Design</h3>
-            <p class="text min-h-[100px]">
-              Great design makes you memorable. We deliver artwork that
-              underscores your brand message and captures potential clients’
-              attention.
+            <h2 class="text-3xl lg:text-5xl">Transform your brand</h2>
+            <p class="text">
+              We are a full-service creative agency specializing in helping
+              brands grow fast. Engage your clients through compelling visuals
+              that do most of the marketing for you.
             </p>
+            <a class="cta">Learn More</a>
           </div>
-        </div>
-      </template>
-      <template #right>
-        <div class="relative">
-          <img
-            alt="orange on blue background"
-            class="w-full h-full object-cover"
-            srcset="
-              /img/mobile/image-photography.jpg   640w,
-              /img/desktop/image-photography.jpg 1440w
-            "
-          />
+        </template>
+        <template #right>
+          <div>
+            <NuxtImg
+              src="/img/desktop/image-transform.jpg"
+              alt="transform egg on yellow background"
+              fit="cover"
+              width="720"
+              height="600"
+              class="xl:w-full xl:h-full"
+            />
+          </div>
+        </template>
+      </Slalom>
+      <Slalom side="right">
+        <template #left>
           <div
-            class="absolute w-full px-8 bottom-6 lg:bottom-12 left-1/2 -translate-x-1/2 space-y-1.5 lg:space-y-6 text-center"
+            class="flex flex-col items-center md:items-stretch text-center md:text-left gap-3 lg:gap-6 py-[18%] md:py-0 px-[9%] lg:px-[18%]"
           >
-            <h3 class="text-2xl lg:text-3xl">Photography</h3>
-            <p class="text min-h-[100px]">
-              Increase your credibility by getting the most stunning,
-              high-quality photos that improve your business image.
+            <h2 class="text-3xl lg:text-5xl">Standout to the right audience</h2>
+            <p class="text">
+              Using a collaborative formula of designers, researchers,
+              photographers, videographers, and copywriters, we’ll build and
+              extend your brand in digital places.
             </p>
+            <a class="cta red">Learn More</a>
           </div>
-        </div>
-      </template>
-    </Slalom>
+        </template>
+        <template #right>
+          <div>
+            <NuxtImg
+              src="/img/desktop/image-stand-out.jpg"
+              alt="stand out cup on pink background"
+              fit="cover"
+              width="720"
+              height="600"
+              class="xl:w-full xl:h-full"
+            />
+          </div>
+        </template>
+      </Slalom>
+      <Slalom side="left">
+        <template #left>
+          <div class="relative">
+            <img
+              alt="cherries on light greenish background"
+              class="w-full h-full object-cover"
+              srcset="
+                /img/mobile/image-graphic-design.jpg   640w,
+                /img/desktop/image-graphic-design.jpg 1440w
+              "
+            />
+            <div
+              class="absolute w-full px-8 bottom-6 lg:bottom-12 left-1/2 -translate-x-1/2 space-y-1.5 lg:space-y-6 text-center"
+            >
+              <h3 class="text-2xl lg:text-3xl">Graphic Design</h3>
+              <p class="text min-h-[100px] max-w-[400px] mx-auto">
+                Great design makes you memorable. We deliver artwork that
+                underscores your brand message and captures potential clients’
+                attention.
+              </p>
+            </div>
+          </div>
+        </template>
+        <template #right>
+          <div class="relative">
+            <img
+              alt="orange on blue background"
+              class="w-full h-full object-cover"
+              srcset="
+                /img/mobile/image-photography.jpg   640w,
+                /img/desktop/image-photography.jpg 1440w
+              "
+            />
+            <div
+              class="absolute w-full px-8 bottom-6 lg:bottom-12 left-1/2 -translate-x-1/2 space-y-1.5 lg:space-y-6 text-center"
+            >
+              <h3 class="text-2xl lg:text-3xl">Photography</h3>
+              <p class="text min-h-[100px] max-w-[400px] mx-auto">
+                Increase your credibility by getting the most stunning,
+                high-quality photos that improve your business image.
+              </p>
+            </div>
+          </div>
+        </template>
+      </Slalom>
+    </section>
 
     <section
       id="Testimonials"
@@ -131,10 +135,17 @@
       class="grid grid-cols-2 grid-flow-row md:grid-cols-4"
     >
       <div v-for="image in galleryImages" :key="image.image">
-        <img :src="image" alt="gallery image" />
+        <NuxtImg
+          :src="image"
+          alt="gallery image"
+          fit="cover"
+          width="720"
+          height="894"
+        />
       </div>
     </section>
-  </div>
+  </main>
+
   <Footer />
 </template>
 
@@ -177,7 +188,7 @@ const galleryImages = [
 
 <style lang="scss">
 a {
-  cursor: pointer;
+  @apply cursor-pointer;
 }
 
 p.text {
