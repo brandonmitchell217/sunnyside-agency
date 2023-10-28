@@ -1,3 +1,16 @@
+<script setup lang="ts">
+import { useFavicon } from "@vueuse/core";
+
+const icon = useFavicon();
+
+icon.value = "/img/favicon-32x32.png";
+useSeoMeta({
+  title: "Sunnyside Agency",
+  ogTitle: "Sunnyside Agency",
+  description: "Sunnyside Agency, a creative mock agency.",
+  ogDescription: "Sunnyside Agency, a creative mock agency.",
+});
+</script>
 <template>
   <Nav />
 
@@ -134,7 +147,7 @@
       id="Image-Gallery"
       class="grid grid-cols-2 grid-flow-row md:grid-cols-4"
     >
-      <div v-for="image in galleryImages" :key="image.image">
+      <div v-for="image in galleryImages" :key="image">
         <NuxtImg
           :src="image"
           alt="gallery image"
@@ -149,7 +162,7 @@
   <Footer />
 </template>
 
-<script>
+<script lang="ts">
 export default {
   data() {
     return {
@@ -177,13 +190,18 @@ const testimonials = [
     text: "Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!",
     img: "/img/image-jennie.jpg",
   },
-];
+] as Array<{
+  name: string;
+  title: string;
+  text: string;
+  img: string;
+}>;
 const galleryImages = [
   "/img/desktop/image-gallery-milkbottles.jpg",
   "/img/desktop/image-gallery-orange.jpg",
   "/img/desktop/image-gallery-cone.jpg",
   "/img/desktop/image-gallery-sugarcubes.jpg",
-];
+] as Array<string>;
 </script>
 
 <style lang="scss">

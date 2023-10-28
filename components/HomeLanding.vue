@@ -13,11 +13,24 @@ defineProps({
       <img
         src="/img/icon-arrow-down.svg"
         alt="down arrow"
-        class="max-w-full m-auto scale-75 sm:scale-100 xl:scale-125 animate-bounce"
+        class="max-w-full m-auto scale-75 sm:scale-100 xl:scale-125 cursor-pointer animate-bounce"
+        @click="scrollDown"
       />
     </div>
   </section>
 </template>
+
+<script lang="ts">
+function scrollDown() {
+  const slaloms = document.getElementById("Slaloms");
+
+  if (slaloms === null) return console.log("Slaloms is null");
+  scrollTo({
+    top: slaloms?.offsetTop - 90,
+    behavior: "smooth",
+  });
+}
+</script>
 
 <style scoped>
 section {
