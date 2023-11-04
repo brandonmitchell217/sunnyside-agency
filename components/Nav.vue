@@ -7,6 +7,7 @@ import {
 const isTabletScreen = useMediaQuery(
   `(min-width: ${breakpointsTailwind.sm}px)`
 );
+const route = useRoute();
 const isActive = ref<Boolean>(false);
 const isScrolled = ref<Boolean>(false);
 const { y } = useWindowScroll();
@@ -41,17 +42,21 @@ watchEffect(() => {
 
       <ul class="hidden md:flex items-center gap-12 text-base">
         <li>
-          <NuxtLink to="/" class="hover:text-white/80">About</NuxtLink>
+          <NuxtLink to="/about" class="hover:text-white/80">About</NuxtLink>
         </li>
         <li>
-          <NuxtLink to="/" class="hover:text-white/80">Services</NuxtLink>
+          <NuxtLink to="/services" class="hover:text-white/80"
+            >Services</NuxtLink
+          >
         </li>
         <li>
-          <NuxtLink to="/" class="hover:text-white/80">Projects</NuxtLink>
+          <NuxtLink to="/projects" class="hover:text-white/80"
+            >Projects</NuxtLink
+          >
         </li>
         <li>
           <NuxtLink
-            to="/"
+            to="/contact"
             class="bg-white text-darkDesaturatedBlue border-transparent border uppercase py-3 px-6 rounded-3xl shadow font-bold font-fraunces hover:bg-white hover:bg-opacity-20 hover:text-white"
             >Contact</NuxtLink
           >
@@ -73,13 +78,13 @@ watchEffect(() => {
           class="flex flex-col items-center gap-8 text-lg font-semibold text-darkGrayishBlue"
         >
           <li>
-            <NuxtLink to="/">About</NuxtLink>
+            <NuxtLink to="/about">About</NuxtLink>
           </li>
           <li>
-            <NuxtLink to="/">Services</NuxtLink>
+            <NuxtLink to="/services">Services</NuxtLink>
           </li>
           <li>
-            <NuxtLink to="/">Projects</NuxtLink>
+            <NuxtLink to="/projects">Projects</NuxtLink>
           </li>
           <li class="mt-4">
             <NuxtLink

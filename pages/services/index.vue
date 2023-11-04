@@ -1,7 +1,7 @@
 <template>
   <Nav />
   <main>
-    <HomeLanding title="Contact Page" class="w-full" />
+    <HomeLanding title="Services Page" class="w-full" />
   </main>
   <Footer />
 </template>
